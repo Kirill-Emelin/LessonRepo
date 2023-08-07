@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonRepo", "LessonRepo\LessonRepo.csproj", "{59059643-D941-4981-945F-9A55F80F16D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59059643-D941-4981-945F-9A55F80F16D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59059643-D941-4981-945F-9A55F80F16D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59059643-D941-4981-945F-9A55F80F16D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59059643-D941-4981-945F-9A55F80F16D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6ACB4666-B290-4A0D-8DC0-7B7BBFF3BFDD}
+	EndGlobalSection
+EndGlobal
