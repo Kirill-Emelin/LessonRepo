@@ -2,15 +2,28 @@
 {
     public class Lesson
     {
+        /// <summary>
+        /// Название урока. Используется для хранения имени урока.
+        /// </summary>
         public string LessonName { get; set; }
+        /// <summary>
+        ///  Показатель наличия урока. Значение "true" указывает на посещение урока, "false" - на отсутствие.
+        /// </summary>
         public bool HasLesson { get; set; }
+        /// <summary>
+        /// Номер урока. Используется для идентификации порядка урока в расписании.
+        /// </summary>
         public int LessonNumber { get; set; }
+        /// <summary>
+        /// Номер кабинета. Сохраняет информацию о номере кабинета, в котором проходит урок.
+        /// </summary>
         public int ClassroomNumber { get; set; }
 
+        // Конструктор класса Lesson
         public Lesson(string name, int lessonNumber, int classroomNumber)
         {
             LessonName = name;
-            HasLesson = false;
+            HasLesson = false; // По умолчанию урок не посещен
             LessonNumber = lessonNumber;
             ClassroomNumber = classroomNumber;
         }
@@ -22,7 +35,7 @@
         {
             List<Lesson> lessons = new List<Lesson>();
 
-            // Добавляем 7 экземпляров класса Lesson с указанием номера урока и кабинета
+            // Создание экземпляров уроков и добавление их в список
             lessons.Add(new Lesson("Биология", 1, 52));
             lessons.Add(new Lesson("Англиский", 2, 50));
             lessons.Add(new Lesson("Физкультура", 3, 3));
@@ -31,7 +44,7 @@
             lessons.Add(new Lesson("Математика", 6, 57));
             lessons.Add(new Lesson("История", 7, 26));
 
-            // Запрашиваем у пользователя информацию о посещении уроков
+            // Запрос информации о посещении уроков у пользователя
             for (int i = 0; i < lessons.Count; i++)
             {
                 bool validInput = false;
@@ -42,13 +55,13 @@
 
                     if (userInput.Trim() == "1")
                     {
-                        lessons[i].HasLesson = true;
-                        validInput = true;
+                        lessons[i].HasLesson = true; // Пользователь посетил урок
+                        validInput = true; // Валидный ввод завершен
                     }
                     else if (userInput.Trim() == "2")
                     {
-                        lessons[i].HasLesson = false;
-                        validInput = true;
+                        lessons[i].HasLesson = false; // Пользователь не посетил урок
+                        validInput = true; // Валидный ввод завершен
                     }
                     else
                     {
@@ -57,7 +70,7 @@
                 }
             }
 
-            // Проверяем, были ли на всех уроках
+            // Проверка и вывод информации о посещении каждого урока
             bool attendedAllLessons = true;
             foreach (Lesson lesson in lessons)
             {
@@ -69,6 +82,7 @@
                 }
             }
 
+            // Вывод сообщения о посещении всех уроков
             if (attendedAllLessons)
             {
                 Console.WriteLine("Вы были на всех уроках!");
